@@ -2,12 +2,12 @@ let fs = require('fs')
 let chalk = require('chalk')
 
 global.owner = [
-  ['6281511480762'],
-  ['6281511480762', 'YahyaGanzz', true]
+  ['6288296172396'],
+  ['6288296172396', 'Fizzx', true]
   // [number, dia creator/owner?, dia developer?]
 ] // Put your number here
 global.mods = [] // Want some help?
-global.prems = [] // Premium user has unlimited limit
+global.prems = ['6288296172396'] // Premium user has unlimited limit
 global.APIs = { // API Prefix
   // name: 'https://website'
   nrtm: 'https://nurutomo.herokuapp.com',
@@ -57,9 +57,9 @@ fs.watchFile(file_exif, () => {
 })
 
 // Sticker WM
-global.packname = sticker_name
-global.author = sticker_author
-global.wm = 'AzzBot-Yahya'
+global.packname = Cheems-Bot 
+global.author = Fizzx
+global.wm = 'Cheemsbot-Fizzx'
 
 global.multiplier = 1000 // The higher, The harder levelup
 
