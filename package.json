@@ -1,114 +1,96 @@
 {
-  "name": "A͎r͎i͎e͎T͎u͎b͎e͎",
-  "version": "7.6.98",
-  "description": "𝙒𝘼 𝘽𝙊𝙏 𝙈𝘿",
-  "depecrated": false,
-  "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
-  "scripts": {
-    "start": "node index.js",
-    "mongo": "node . --db 'mongodb+srv://Metafor1000:metafor1000@cluster0.qy9jg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'",
-    "test": "node test.js",
-    "test2": "nodemon index.js --server --autocleartmp"
-  },
+  "name": "@adiwajshing/baileys",
+  "version": "4.3.0",
+  "description": "WhatsApp API",
+  "homepage": "https://github.com/adiwajshing/Baileys",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "keywords": [
-    "termux-whatsapp-bot",
-    "whatsapp-bot",
     "whatsapp",
     "js-whatsapp",
+    "whatsapp-api",
+    "whatsapp-web",
     "whatsapp",
-    "Games-wabot",
-    "wabot-aq",
-    "multi-device",
-    "MD",
-    "baileys-md"
+    "whatsapp-chat",
+    "whatsapp-group",
+    "automation",
+    "multi-device"
   ],
-  "homepage": "https://github.com/arivpns",
-  "author": "Nurutomo,Muhammad Ridwan Reynaldy",
+  "scripts": {
+    "test": "jest",
+    "prepare": "tsc",
+    "build:all": "tsc && typedoc",
+    "build:docs": "typedoc",
+    "build:tsc": "tsc",
+    "example": "node --inspect -r ts-node/register Example/example.ts",
+    "example:legacy": "node --inspect -r ts-node/register Example/example-legacy.ts",
+    "gen-protobuf": "sh WAProto/GenerateStatics.sh",
+    "browser-decode": "yarn ts-node src/BrowserMessageDecoding.ts",
+    "lint": "eslint ./src --ext .js,.ts,.jsx,.tsx",
+    "lint:fix": "eslint ./src --fix --ext .js,.ts,.jsx,.tsx"
+  },
+  "author": "Adhiraj Singh",
+  "license": "MIT",
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Arivpns"
+    "url": "git@github.com:adiwajshing/baileys.git"
   },
-  "bugs": {
-    "url": "https://github.com/arivpns"
-  },
-  "license": "GPL-3.0-or-later",
   "dependencies": {
-    "@adiwajshing/baileys": "^4.1.0",
-    "@adiwajshing/keyed-db": "^0.2.4",
-    "@bochilteam/scraper": "0.0.81",
-    "acrcloud": "^1.4.0",
-    "async": "^3.2.1",
-    "awesome-phonenumber": "^2.66.0",
+    "@hapi/boom": "^9.1.3",
     "axios": "^0.24.0",
-    "base64-to-image": "^1.0.2",
-    "brainly-scraper": "^1.0.3",
-    "brainly-scraper-v2": "^2.0.4-1",
-    "cfonts": "^2.10.0",
-    "chalk": "^4.1.1",
-    "cheerio": "^1.0.0-rc.10",
-    "child_process": "^1.0.2",
-    "colors": "^1.4.0",
-    "crypto": "^1.0.1",
-    "dhn-api": "^1.1.3",
-    "dotenv": "^10.0.0",
-    "emoji-api": "^2.0.1",
-    "escape-string-regexp": "^5.0.0",
-    "express": "^4.17.1",
-    "file-type": "^16.5.3",
-    "fluent-ffmpeg": "^2.1.2",
-    "form-data": "^4.0.0",
-    "fs-extra": "^10.0.0",
-    "g-i-s": "^2.1.6",
-    "google-it": "^1.6.2",
-    "got": "^11.8.2",
-    "human-readable": "^0.2.1",
-    "hxz-api": "^1.0.1",
-    "image-to-base64": "^2.2.0",
-    "imagemagick": "^0.1.3",
-    "imgbb-uploader": "^1.3.3",
-    "jsdom": "^16.7.0",
-    "lodash": "^4.17.21",
-    "lowdb": "^2.1.0",
-    "lyrics-finder": "^21.7.0",
-    "mathjs": "^9.5.2",
-    "moment-timezone": "^0.5.34",
-    "mongoose": "^6.1.5",
-    "ms": "^2.1.3",
-    "multistream": "^4.1.0",
-    "node-fetch": "^2.6.7",
-    "node-gtts": "^2.0.2",
-    "node-gyp-build": "^4.3.0",
-    "node-scrapy": "^0.5.0",
-    "node-tesseract-ocr": "^2.2.1",
-    "node-webpmux": "^3.1.1",
-    "ocr-space-api-wrapper": "^2.1.1",
-    "path": "^0.12.7",
-    "peok": "^1.0.2",
-    "perf_hooks": "0.0.1",
-    "performance-now": "^2.1.0",
-    "pino": "^7.8.0",
-    "pino-pretty": "^7.5.1",
-    "qrcode": "^1.5.0",
-    "qrcode-terminal": "^0.12.0",
-    "qs": "^6.10.1",
-    "request": "^2.88.2",
-    "scrape-primbon": "^1.1.0",
-    "similarity": "^1.2.1",
-    "socket.io": "^4.4.1",
-    "syntax-error": "^1.4.0",
-    "terminal-image": "^2.0.0",
-    "translate-google-api": "^1.0.4",
-    "url": "^0.11.0",
-    "url-regex": "^5.0.0",
-    "url-regex-safe": "^2.1.0",
-    "util": "^0.12.4",
-    "wa-sticker-formatter": "^4.0.14",
-    "yargs": "^17.0.1",
-    "yt-search": "^2.9.0",
-    "zs-extract": "^1.4.1"
+    "futoin-hkdf": "^1.5.0",
+    "libsignal": "git+https://github.com/adiwajshing/libsignal-node",
+    "music-metadata": "^7.12.3",
+    "node-cache": "^5.1.2",
+    "pino": "^7.0.0",
+    "protobufjs": "^6.11.3",
+    "ws": "^8.0.0"
   },
-  "devDependencies": {}
+  "peerDependencies": {
+    "@adiwajshing/keyed-db": "^0.2.4",
+    "jimp": "^0.16.1",
+    "link-preview-js": "^2.1.13",
+    "qrcode-terminal": "^0.12.0",
+    "sharp": "^0.30.5"
+  },
+  "peerDependenciesMeta": {
+    "@adiwajshing/keyed-db": {
+      "optional": true
+    },
+    "jimp": {
+      "optional": true
+    },
+    "qrcode-terminal": {
+      "optional": true
+    },
+    "sharp": {
+      "optional": true
+    },
+    "link-preview-js": {
+      "optional": true
+    }
+  },
+  "files": [
+    "lib/*",
+    "WAProto/*",
+    "WASignalGroup/*.js"
+  ],
+  "devDependencies": {
+    "@adiwajshing/eslint-config": "git+https://github.com/adiwajshing/eslint-config",
+    "@adiwajshing/keyed-db": "^0.2.4",
+    "@types/got": "^9.6.11",
+    "@types/jest": "^27.5.1",
+    "@types/node": "^16.0.0",
+    "@types/sharp": "^0.29.4",
+    "@types/ws": "^8.0.0",
+    "eslint": "^8.0.0",
+    "jest": "^27.0.6",
+    "jimp": "^0.16.1",
+    "link-preview-js": "^2.1.13",
+    "qrcode-terminal": "^0.12.0",
+    "sharp": "^0.30.5",
+    "ts-jest": "^27.0.3",
+    "ts-node": "^10.8.1",
+    "typedoc": "^0.22.0",
+    "typescript": "^4.0.0"
+  }
 }
